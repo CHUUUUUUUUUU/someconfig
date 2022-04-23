@@ -1,0 +1,15 @@
+#From 🐩️哥 (https://raw.githubusercontent.com/Neurogram-R/Surge/master/module/Q-Search.sgmodule)
+# https://github.com/KOP-XIAO/QuantumultX/blob/master/Q-Search.list
+#- Safari 内输入 命令 + 空格 + 关键词 快速指定搜索引擎搜索
+#注：先进入设置更改 Safari 默认搜索为 DuckDuckGO
+
+hostname = duckduckgo.com
+
+
+^https:\/\/duckduckgo.com\/\?q=en\+([^&]+).+ url 302 https://www.deepl.com/translator-mobile#zh/en/$1
+^https:\/\/duckduckgo.com\/\?q=zh\+([^&]+).+ url 302 https://www.deepl.com/translator-mobile#en/zh/$1
+^https:\/\/duckduckgo.com\/\?q=ddg\+([^&]+).+ url 302 https://duckduckgo.com/?ia=about&q=$1
+^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ url 302 https://github.com/search?q=$1
+^https:\/\/duckduckgo.com\/\?q=gm\+([^&]+).+ url 302 https://www.google.com/search?&tbm=isch&q=$1
+^https:\/\/duckduckgo.com\/\?q=wp\+([^&]+).+ url 302 https://zh.wikipedia.org/wiki/$1
+^https:\/\/duckduckgo.com\/\?q=([^&]+).+ url 302 https://www.google.com/search?q=$1
